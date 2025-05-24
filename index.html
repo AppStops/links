@@ -1,40 +1,145 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Мои ссылки</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zakir — Мои ссылки</title>
   <style>
+    :root {
+      --accent: #ff5a76;
+      --bg: #1a1e35;
+      --bg-hover: #373f66;
+      --card: #2d3252;
+      --text: #fff;
+      --text-muted: #8b8fa3;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
     body {
-      font-family: sans-serif;
-      background: #111;
-      color: #fff;
+      background-color: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      width: 100%;
       text-align: center;
-      padding: 40px;
+      margin-top: 40px;
     }
-    a {
-      display: block;
-      background: #222;
-      margin: 10px auto;
+
+    .profile-photo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 4px solid var(--accent);
+      object-fit: cover;
+      margin-bottom: 20px;
+      box-shadow: 0 0 20px rgba(255, 90, 118, 0.3);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .instructions {
+      background-color: rgba(255, 90, 118, 0.1);
+      border-left: 4px solid var(--accent);
       padding: 15px 20px;
-      width: 90%;
-      max-width: 400px;
-      border-radius: 10px;
-      color: #fff;
-      text-decoration: none;
-      font-size: 18px;
-      transition: 0.2s;
+      border-radius: 8px;
+      margin: 25px 0;
+      text-align: left;
     }
-    a:hover {
-      background: #444;
+
+    .instruction-list {
+      padding-left: 20px;
+      line-height: 1.6;
+    }
+
+    .social-links {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    .link-button {
+      display: flex;
+      align-items: center;
+      padding: 14px 20px;
+      background-color: var(--card);
+      border-radius: 10px;
+      text-decoration: none;
+      color: var(--text);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .link-button:hover {
+      background-color: var(--bg-hover);
+      transform: translateY(-2px);
+    }
+
+    .link-icon {
+      width: 28px;
+      height: 28px;
+      margin-right: 15px;
+    }
+
+    .link-text {
+      font-size: 1.2rem;
+    }
+
+    .footer {
+      margin-top: auto;
+      padding: 20px 0;
+      font-size: 0.9rem;
+      color: var(--text-muted);
     }
   </style>
 </head>
 <body>
-  <h1>Привет, я Zakir!</h1>
-  <a href="https://t.me/yourchannel" target="_blank">Telegram</a>
-  <a href="https://youtube.com/yourchannel" target="_blank">YouTube</a>
-  <a href="https://zakostore.pw" target="_blank">Магазин</a>
+  <div class="container">
+    <img src="banner.png" alt="Аватарка" class="profile-photo" />
+    <h1>ВНИМАНИЕ</h1>
+
+    <div class="instructions">
+      <ol class="instruction-list">
+        <li>Нажми на три точки (справа вверху) и выбери "Открыть в браузере"</li>
+        <li>После этого ты сможешь перейти в Telegram-канал</li>
+      </ol>
+    </div>
+
+    <div class="social-links">
+      <a href="https://t.me/appstopsbot" class="link-button" target="_blank">
+        <img src="telegram-svgrepo-com.svg" alt="Telegram" class="link-icon" />
+        <span class="link-text">Telegram Бот</span>
+      </a>
+      <a href="https://zakostore.pw" class="link-button" target="_blank">
+        <img src="gamepad-svgrepo-com.svg" alt="Store" class="link-icon" />
+        <span class="link-text">Магазин аккаунтов</span>
+      </a>
+      <a href="https://youtube.com/" class="link-button" target="_blank">
+        <img src="youtube-svgrepo-com.svg" alt="YouTube" class="link-icon" />
+        <span class="link-text">YouTube Канал</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="footer">
+    © 2025 Zakir. Все права защищены.
+  </div>
 </body>
 </html>
-
